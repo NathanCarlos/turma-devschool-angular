@@ -47,6 +47,7 @@ Ele também mantém um repositório online NPM que também é mantido pela Joyen
 
 # Instalação do Node e NPM
 Como falamos agora pouco, o NPM passou a ser integrado ao instalador do Node.js, então podemos seguir só realizando a instalação do node com um tutorial através desse link: https://www.treinaweb.com.br/blog/instalacao-do-node-js-windows-mac-e-linux
+
 Você também pode consultar esse link para auxiliar na etapa de instalação:
 https://github.com/NathanCarlos/turma-devschool/blob/main/etapas-instalacao-node-js/etapas-instalacao-node.md
 
