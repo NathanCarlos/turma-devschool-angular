@@ -103,6 +103,7 @@ Assim que a instalação for concluída rode o comando **ng --version** e ele te
 ## Lista de exercícios
 Exercício 1) Crie um projeto utilizando o cli do angular e que utiliza o padrão sass para estilização.
 
+Exercício 2) No arquivo app.component.html coloque um h1 com o texto: "Hello World".
 
 # Fontes e Referências
 
