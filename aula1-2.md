@@ -100,8 +100,75 @@ O processo de instalação pode demorar alguns minutos, devido a várias verific
 
 Assim que a instalação for concluída rode o comando **ng --version** e ele te mostrará qual versão do Angular Cli está instalada na sua máquina.
 
+# Como Inicializar um Projeto Angular?
+Após a instalação do angular, já podemos começar a criar projetos através do angular cli.
+Para isso, crie uma pasta onde preferir no seu computador, abra um terminal nessa pasta e execute o comando **ng new primeiro-projeto** onde **ng new** é o comando do angular cli e **primeiro-projeto** é o nome que seu projeto angular terá. 
+Após executar o comando, o cli irá perguntar se deseja adicionar o angular routing, aperte a tecla "N", conforme a imagem abaixo:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/nao-adicionar-angular-routing.PNG?raw=true)
+
+Após isso o cli irá perguntar qual forma de escrita do css você deseja utilizar, selecione [SCSS](https://qastack.com.br/programming/46400443/what-is-the-difference-between-css-and-scss) e pressione enter conforme a imagem abaixo:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/selecione-scss.PNG?raw=true)
+
+Após isso o angular cli irá criar os arquivos necessários para a aplicação angular e o npm irá instalar as dependências conforme a imagem abaixo:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/imagem-instalacao-pacotes.PNG?raw=true)
+
+Após isso execute o comando **cd primeiro-projeto** no terminal, para entrar na pasta do seu projeto. No terminal execute o comando **ng serve** ou **npm start** para a sua aplicação angular rodar, o cli irá perguntar se você deseja compartilhar dados de uso do projeto, pressione a tecla "N" conforme a imagem abaixo:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/imagem-estatisticas.PNG?raw=true)
+
+O angular irá compilar a sua primeira aplicação e deixará disponível para acessar na porta padrão **4200**. Após a compilação o terminal ficará desta forma:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/compilado-com-sucesso.PNG?raw=true)
+
+Pronto, agora sua aplicação já está de "pé" para conseguir acessar pelo navegador. Abra seu navegador e digite **localhost:4200** na barra de endereço e pressione a tecla **enter**, o site que deverá aparecer é o que mostra na imagem abaixo:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/projeto-rodando.PNG?raw=true)
+
+Pronto! O seu primeiro projeto Angular já está rodando e podemos prosseguir para a explicação do que é cada arquivo que foi criado pelo angular cli.
+
+# O Que é Cada Arquivo na Pasta do Projeto Angular?
+Agora que já criamos nosso primeiro projeto, podemos importar ele no visual studio code para termos uma visualização das pastas melhor, para isso abra seu vs code e na parte do explorador clique na opção "Add folder" conforme a imagem abaixo:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/adicionar-pasta.PNG?raw=true)
+
+Navegue até a pasta do seu projeto angular e clique em adicionar, conforme a imagem abaixo:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/adicionar-pasta-projeto.PNG?raw=true)
+
+Após isso seu vs code deve ficar desta forma:
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/visual-studio-fica-assim.PNG?raw=true)
+
+Agora já podemos entender por cima o que são alguns arquivos/pastas do seu projeto!!
+
+![enter image description here](https://github.com/NathanCarlos/turma-devschool/blob/main/imagens-ilustrativas/o-que-cada-arquivo.PNG?raw=true)
+
+-   node_modules / - É onde todas as dependências do projeto(Pacotes Javascript/Typescript) são instalados, vamos ver um pouco melhor na aula! Você pode abrir a pasta e ver os pacotes disponíveis.
+    
+-   src / - Esta pasta é onde iremos trabalhar no projeto usando o Angular. Especialmente usando os arquivos localizados dentro da pasta src / app que foi criada durante a instalação do projeto e contém todos os arquivos necessários para trabalharmos no primeiro-projeto.
+
+A pasta primeiro-projeto contém alguns arquivos em sua estrutura:
+
+-   editorconfig - Este é o arquivo de configuração do editor(VS CODE).
+    
+-   .gitignore - Um arquivo .gitignore deve ser confirmado no repositório, para compartilhar as regras de ignorar com outros usuários que clonam o repositório.
+    
+-   angular.json - basicamente contém o nome do projeto, a versão do cli e configurações do compilador, veremos mais a fundo nas aulas.
+    
+-   package.json - O arquivo package.json informa quais bibliotecas serão instaladas no node_modules quando você executar o npm install. Caso você precise adicionar mais bibliotecas, adicione-as no arquivo package.json e execute o comando npm install.
+    
+-   tsconfig.json - basicamente contém as opções do compilador necessárias durante a compilação.
+- A pasta src / é a pasta principal, que possui internamente uma estrutura de arquivos diferente.
+
+Referente aos outros arquivos da pasta veremos melhor em aula para um entendimento melhor com o professor!!
+
 ## Lista de exercícios
-Exercício 1) Crie um projeto utilizando o cli do angular e que utiliza o padrão sass para estilização.
+Para conseguir realizar a lista de exercícios aguarde a aula para um entendimento melhor, porém se quiser se desafiar a fazer tudo bem :)
+
+Exercício 1) Crie um projeto utilizando o cli do angular e que utiliza o padrão SCSS para estilização.
 
 Exercício 2) No arquivo app.component.html coloque um h1 com o texto: "Hello World".
 
