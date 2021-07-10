@@ -1,0 +1,18 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px inset;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        li {
+            cursor: pointer;
+        }
+    }
+}
