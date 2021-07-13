@@ -61,6 +61,62 @@ Esse será o resultado quando o componente for exibido no navegador:
 ## Lista de exercícios
 Para conseguir realizar a lista de exercícios aguarde a aula para um entendimento melhor, porém se quiser se desafiar a fazer tudo bem :)
 
+Exercício 1) Crie um projeto angular com o ng new para gestão de colaboradores.
+
+Exercício 2) Crie um módulo para services, pipes e components compartilhados e um módulo para feature de colaboradores.
+
+Exercício 3) Com o projeto do exercício anterior, crie 3 componentes, 1 header, 1 footer, 1 componente para listagem dos cadastros de colaboradores. O header e footer serão compartilhados entre a aplicação, então crie na pasta shared>components, já a listagem de colaboradores crie em features/colaboradores.
+
+Exercício 4) Com o projeto do exercício anterior, estilize de forma básica o header e footer.
+
+Exercício 5) Com o projeto do exercício anterior, no componente de listagem de colaboradores, crie uma variável que vai receber a lista de colaboradores abaixo, e faça a listagem na tela com data-binding através de interpolação.
+>colaboradores = [
+        {
+            id: 1,
+            nome: 'Nathan Carlos',
+            salario: 7000,
+            cargo: 'Dev Pl'
+        },
+        {
+            id: 2,
+            nome: 'David Carlos',
+            salario: 3000,
+            cargo: 'Dev Jr'
+        },
+        {
+            id: 3,
+            nome: 'Mateus Augusto',
+            salario: 3500,
+            cargo: 'Dev Jr'
+        },
+        {
+            id: 4,
+            nome: 'Alberto Silva',
+            salario: 10000,
+            cargo: 'Dev Sr'
+        },
+        {
+            id: 5,
+            nome: 'Rogerio Souza',
+            salario: 9000,
+            cargo: 'Dev Sr'
+        },
+        {
+            id: 6,
+            nome: 'Gabriel Miguel',
+            salario: 9500,
+            cargo: 'Dev Sr'
+        },
+        {
+            id: 6,
+            nome: 'Alan Jhonnes',
+            salario: 11000,
+            cargo: 'Arquiteto'
+        }
+    ]
+
+
+Exercício 6) No app.component.html utilize nessa ordem: header, listagem, footer.
 
 # Fontes e Referências
 http://www.macoratti.net/17/06/angcli_pag5.htm
