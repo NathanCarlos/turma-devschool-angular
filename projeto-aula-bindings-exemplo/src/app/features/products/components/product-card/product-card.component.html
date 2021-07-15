@@ -1,0 +1,13 @@
+<div class="card">
+    <img width="250px" height="250px"
+        [src]="product?.img">
+    <div class="card-description">
+        <p><b>{{product?.description}}</b></p>
+        <h3>{{product?.price}}</h3>
+        <p><b>10x sem juros de R${{getInstallmentProduct(product?.price)}}</b></p>
+        <p><b>ou R${{getBilletPrice(product?.price)}} no boleto</b></p>
+    </div>
+    <div class="actions add-to-cart" (click)="addToCart()">
+        Adicionar ao carrinho
+    </div>
+</div>
