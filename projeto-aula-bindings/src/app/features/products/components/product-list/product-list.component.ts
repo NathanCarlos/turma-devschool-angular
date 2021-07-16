@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -9,7 +10,7 @@ export class ProductListComponent implements OnInit {
 
   title = 'Lista de Produtos';
 
-  products = [
+  products: Array<Product> = [
     {
         id: 1,
         description: 'Notebook S51',
@@ -75,6 +76,10 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  transformPrice(preco: number) {
+      return `R$${preco},00`;
   }
 
 }

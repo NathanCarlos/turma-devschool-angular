@@ -1,13 +1,18 @@
-<!-- <h3>{{title}}</h3>
-<div class="card" *ngFor="let product of products">
-    <h3 class="title">{{ product.description }}</h3>
-    <div class="content-card">
+<h3>{{title}}</h3>
+<!-- <div class="card" *ngFor="let product of products"> -->
+    <!-- <h3 class="title">{{ product.description }}</h3>
+    <img [src]="product.img" alt="">
+    <p>{{transformPrice(product.price)}}</p> -->
+    <!-- <div class="content-card">
         <p>{{ product.price }}</p>
-    </div>
-</div> -->
+    </div> -->
+<!-- </div> -->
 
-<!-- <div class="products-container">
+<div class="products-container">
     <app-product-card
+    *ngFor="let item of products"
+    [product]="item"></app-product-card>
+    <!-- <app-product-card
     *ngFor="let product of products"
-    [product]="product"></app-product-card>
-</div> -->
+    [product]="product"></app-product-card> -->
+</div>

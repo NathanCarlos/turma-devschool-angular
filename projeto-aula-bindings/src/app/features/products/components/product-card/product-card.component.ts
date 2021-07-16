@@ -16,8 +16,8 @@ export class ProductCardComponent implements OnInit {
   // @Input()
   // img: string = '';
 
-  // @Input()
-  // product?: Product;
+  @Input()
+  product?: Product;
 
   constructor() { }
 
