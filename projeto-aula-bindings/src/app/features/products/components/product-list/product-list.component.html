@@ -2,7 +2,7 @@
     <h3>{{title}}</h3>
     <h3>Busca de Produtos Por Nome</h3>
     <input type="text" placeholder="Digite o nome do produto" 
-    (keydown)="getProductsByDescription($event)">
+    (input)="getProductsByDescription($event)">
 </div>
 
 <div class="products-container">
