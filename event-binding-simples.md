@@ -33,6 +33,46 @@ Para conseguir realizar a lista de exercícios aguarde a aula para um entendimen
 
 2) Com o projeto do exercício anterior, crie um botão chamado "remover" no componente de colaborador, que quando for clicado chame uma função que exiba um alerta com a mensagem: "Colaborador excluído com sucesso!"
 
+Exercício 3) Crie um projeto angular para gestão de tarefas do dia a dia. Esse projeto deverá conter a seguinte estrutura: 1 header, 1 footer, 1 componente para listagem das tarefas, 1 componente de cada tarefa. Considere o array de objetos abaixo para exibir as tarefas na tela.
+
+> tasks = [
+    {
+        id: 1,
+        description: 'Criar um projeto básico',
+        completed: false
+    },
+    {
+        id: 2,
+        description: 'Colocar o lixo para fora até as 19h',
+        completed: true
+    },
+    {
+        id: 3,
+        description: 'Fazer o jantar até as 22h',
+        completed: true
+    },
+    {
+        id: 4,
+        description: 'Reunião de alinhamento dia 18/07 as 14h',
+        completed: true
+    },
+    {
+        id: 5,
+        description: 'Reunião de alinhamento projeto bradesco 18/07 as 16h',
+        completed: false
+    },
+    {
+        id: 6,
+        description: 'Criar conteúdo da aula',
+        completed: false
+    }
+]
+
+Obs: Utilize as boas práticas ensinadas em aula para criar o projeto!
+
+Exerício 4) Com base no projeto do exercício 3, ao clicar no campo "completed" da tarefa, ele deverá alterar para true/false.
+
+Exercício 5) Com base no projeto do exercício 3, crie um input para busca de tarefas por nome.
 
 # Fontes e Referências
 http://blog.almeidapedro.com.br/post/2017/12/13/bindings-em-angular
