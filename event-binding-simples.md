@@ -29,5 +29,10 @@ e também transferir o valor do template para o componente através do objeto $e
 ## Lista de exercícios
 Para conseguir realizar a lista de exercícios aguarde a aula para um entendimento melhor, porém se quiser se desafiar a fazer tudo bem :)
 
+1) Com o projeto do exercício anterior crie um componente para colaborador, e atualize seu componente de lista de colaboradores para fazer um ngFor e listar com o componente de colaborador.
+
+2) Com o projeto do exercício anterior, crie um botão chamado "remover" no componente de colaborador, que quando for clicado chame uma função que exiba um alerta com a mensagem: "Colaborador excluído com sucesso!"
+
+
 # Fontes e Referências
 http://blog.almeidapedro.com.br/post/2017/12/13/bindings-em-angular
