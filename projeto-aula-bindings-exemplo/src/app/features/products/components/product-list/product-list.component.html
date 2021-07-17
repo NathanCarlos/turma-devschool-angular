@@ -5,9 +5,12 @@
         <p>{{ product.price }}</p>
     </div>
 </div> -->
-
+<div class="search">
+    <h3>Busca de Produtos</h3>
+    <input type="text" placeholder="Digite o nome de um produto" (input)="findProducts($event)">
+</div>
 <div class="products-container">
     <app-product-card
-    *ngFor="let product of products"
+    *ngFor="let product of filteredProducts"
     [product]="product"></app-product-card>
 </div>

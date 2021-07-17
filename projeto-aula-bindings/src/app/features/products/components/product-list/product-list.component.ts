@@ -73,9 +73,22 @@ export class ProductListComponent implements OnInit {
     }
   ];
 
+  filteredProducts: Array<Product> = this.products;
+
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  getProductsByDescription(event: any) {
+      const value = event.target.value;
+
+      this.filteredProducts = this.products.filter(
+          (product) => product.description.toUpperCase().search(value.toUpperCase()) > -1);
+      if(this.filteredProducts.length === 0) {
+          this.filteredProducts = this.products;
+      }
   }
 
   transformPrice(preco: number) {

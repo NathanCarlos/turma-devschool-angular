@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -9,7 +10,7 @@ export class ProductListComponent implements OnInit {
 
   title = 'Lista de Produtos';
 
-  products = [
+  products: Array<Product> = [
     {
         id: 1,
         description: 'Notebook S51',
@@ -72,9 +73,17 @@ export class ProductListComponent implements OnInit {
     }
   ];
 
+  filteredProducts: Array<Product> = this.products;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  findProducts(event: any) {
+    const value = event.target.value;
+    this.filteredProducts = this.products.filter(
+        (product) => product.description.toUpperCase().search(value?.toUpperCase()) > -1);
   }
 
 }

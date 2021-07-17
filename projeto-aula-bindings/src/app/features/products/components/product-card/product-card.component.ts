@@ -28,6 +28,10 @@ export class ProductCardComponent implements OnInit {
   //   alert(`O produto ${this.product?.description} foi adicionado ao carrinho!`);
   // }
 
+  addToCart() {
+    alert(`O produto ${this.product?.description} foi adicionado ao carrinho!`);
+  }
+
   // getInstallmentProduct(price?: number) {
   //   if (price) return price / 10;
   //   return price;

@@ -1,18 +1,12 @@
-<h3>{{title}}</h3>
-<!-- <div class="card" *ngFor="let product of products"> -->
-    <!-- <h3 class="title">{{ product.description }}</h3>
-    <img [src]="product.img" alt="">
-    <p>{{transformPrice(product.price)}}</p> -->
-    <!-- <div class="content-card">
-        <p>{{ product.price }}</p>
-    </div> -->
-<!-- </div> -->
+<div class="search">
+    <h3>{{title}}</h3>
+    <h3>Busca de Produtos Por Nome</h3>
+    <input type="text" placeholder="Digite o nome do produto" 
+    (keydown)="getProductsByDescription($event)">
+</div>
 
 <div class="products-container">
     <app-product-card
-    *ngFor="let item of products"
+    *ngFor="let item of filteredProducts"
     [product]="item"></app-product-card>
-    <!-- <app-product-card
-    *ngFor="let product of products"
-    [product]="product"></app-product-card> -->
 </div>
