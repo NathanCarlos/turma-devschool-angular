@@ -1,0 +1,14 @@
+<div class="card">
+    <img width="250px" height="250px"
+        [src]="product?.img">
+    <div class="card-description">
+        <p><b>{{product?.description}}</b></p>
+        <h3>{{product?.price}}</h3>
+        <!-- <h3 class="not-available">Não disponível</h3>
+        <h3 class="available">Disponível</h3> -->
+        <h3>{{ product?.quantity ? 'Disponível' : 'Não Disponível' }}</h3>
+    </div>
+    <div class="actions add-to-cart" (click)="addToCart()">
+        Adicionar ao carrinho
+    </div>
+</div>

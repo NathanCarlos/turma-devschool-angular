@@ -5,12 +5,12 @@
     (input)="getProductsByDescription($event)">
 </div>
 
-<div class="products-container" *ngIf="filteredProducts.length > 0">
+<div class="products-container">
     <app-product-card
     *ngFor="let item of filteredProducts"
     [product]="item"></app-product-card>
 </div>
 
-<div class="zero-products-message" *ngIf="filteredProducts.length === 0">
-    <h3>Não existe produtos para essa busca!</h3>
+<div class="zero-products-message">
+    <!-- <h3>Não existe produtos para essa busca!</h3> -->
 </div>
