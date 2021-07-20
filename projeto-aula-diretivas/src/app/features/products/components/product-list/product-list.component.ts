@@ -88,7 +88,6 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   getProductsByDescription(event: any) {

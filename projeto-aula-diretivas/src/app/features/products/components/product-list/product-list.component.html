@@ -11,6 +11,6 @@
     [product]="item"></app-product-card>
 </div>
 
-<div class="zero-products-message">
-    <!-- <h3>Não existe produtos para essa busca!</h3> -->
+<div class="zero-products-message" *ngIf="filteredProducts.length === 0">
+    <h3>Não existe produtos para essa busca!</h3>
 </div>
