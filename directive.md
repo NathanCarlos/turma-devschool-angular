@@ -55,3 +55,9 @@ No meu caso, coloquei no meu h3 do header.component, então ele atualizou o text
 
 ## Lista de exercícios
 Para conseguir realizar a lista de exercícios aguarde a aula para um entendimento melhor, porém se quiser se desafiar a fazer tudo bem :)
+
+Exercício 1) Crie uma diretiva de atributo para alterar a cor de elementos quando for utilizada.
+
+Exercício 2) Para esse exercício, utilize o projeto de tarefas criado na lista de exercícios desse link: https://github.com/NathanCarlos/turma-devschool/blob/main/event-binding-simples.md e na listagem das tarefas coloque um ngIf para quando não tiver tarefas com base na busca, exibir a seguinte mensagem: "Não existe tarefas para essa busca!".
+
+Exercício 3) Utilize ngClass para estilizar a tarefa completa/incompleta de formas diferentes.
