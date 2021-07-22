@@ -1,0 +1,16 @@
+<div class="search">
+    <h3>{{title}}</h3>
+    <h3>Busca de Produtos Por Nome</h3>
+    <input type="text" placeholder="Digite o nome do produto" 
+    (input)="getProductsByDescription($event)">
+</div>
+
+<div class="products-container">
+    <app-product-card
+    *ngFor="let item of filteredProducts"
+    [product]="item"></app-product-card>
+</div>
+
+<div class="zero-products-message" *ngIf="filteredProducts.length === 0">
+    <h3>Não existe produtos para essa busca!</h3>
+</div>

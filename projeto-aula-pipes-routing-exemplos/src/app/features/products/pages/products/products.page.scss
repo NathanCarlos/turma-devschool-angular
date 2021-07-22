@@ -1,0 +1,12 @@
+@import 'src/assets/styles/_colors.scss';
+
+h3 {
+    padding-left: 10px;
+    color: $cor-aviso-perigo;
+}
+
+app-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

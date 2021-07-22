@@ -1,0 +1,14 @@
+<div class="card" *ngIf="product">
+    <img width="250px" height="250px"
+        [src]="product.img">
+    <div class="card-description">
+        <p><b>{{product.description}}</b></p>
+        <h3>{{product.price | currency: 'BRL'}}</h3>
+        <p>Pague {{getPriceWithDiscount(product.price) | currency: 'BRL'}} no boleto com {{ (percentDiscount / 100) | percent}} de desconto!</p>
+        <h3 [ngClass]="{'available': product.quantity >= 3, 'not-available': product.quantity < 3}"
+            >{{ product.quantity >= 3 ? 'Disponível' : 'Não Disponível' }}</h3>
+    </div>
+    <div class="actions add-to-cart" (click)="addToCart()">
+        Adicionar ao carrinho
+    </div>
+</div>
