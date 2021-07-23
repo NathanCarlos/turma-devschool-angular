@@ -1,10 +1,11 @@
 
 <div class="container">
     <div class="search">
-        <h3>Busca de Tarefas</h3>
+        <h3 appRed>Busca de Tarefas</h3>
         <input type="text" (input)="searchTask($event)" placeholder="Digite a descrição">
     </div>
     <app-task 
     *ngFor="let item of filteredTasks"
     [task]="item"></app-task>
+    <h3 *ngIf="filteredTasks.length === 0">Não existe tarefas para essa busca!</h3>
 </div>
