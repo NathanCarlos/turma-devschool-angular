@@ -51,6 +51,8 @@ Exemplo de massa de alunos que você precisará gerar:
 # Fontes e Referências
 
 https://imasters.com.br/desenvolvimento/angular-criacao-de-pipes#:~:text=Introdu%C3%A7%C3%A3o,do%20template%20do%20nosso%20projeto.
+
 https://www.devmedia.com.br/angular-filter-e-pipes/40798
+
 https://balta.io/blog/angular-rotas-guardas-navegacao
 
