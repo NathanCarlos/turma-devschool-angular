@@ -29,6 +29,25 @@ Exercício 2) Utilize o projeto de tarefas criado nas aulas, considere o array a
 { id:  6, description:  'Criar conteúdo da aula', completed:  false, inclusionDate:  '2021-07-18' }
 ];
 
+Exercício 3) Crie um sistema de gerenciamento de acadêmia, crie algumas massas(array com objetos) de alunos com os seguintes dados: id, nome, valor da mensalidade, data último pagamento, data de inclusão no sistema.
+Para criar o sistema, utilize boas práticas e o sistema de roteamento ensinado em aula.
+No sistema você deverá listar na página principal alguns alunos que você mesmo irá gerar a massa com base nas informações passadas acima.
+Crie uma rota e página de login de usuário, uma rota e página de cadastro de usuários, uma rota e página de cadastro de alunos da academia.
+
+
+Obs: Para ter uma listagem na página principal você deverá ter uma rota também...
+
+Exemplo de massa de alunos que você precisará gerar:
+>[
+    {
+      id: 1,
+      nome: 'Nathan Carlos',
+      valorMensalidade: 100,
+      dataUltimoPgto: '2021-07-23',
+      dataInclusaoSistema: '2021-07-01'
+    }
+]
+
 # Fontes e Referências
 
 https://imasters.com.br/desenvolvimento/angular-criacao-de-pipes#:~:text=Introdu%C3%A7%C3%A3o,do%20template%20do%20nosso%20projeto.
