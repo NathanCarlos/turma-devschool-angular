@@ -1,0 +1,6 @@
+<div class="card" *ngIf="student">
+    <h1>{{ student.name }}</h1>
+    <h2>Email: {{ student.email }}</h2>
+    <h3>Mensalidade: {{ student.monthlyPayment | currency: 'BRL'}}</h3>
+    <h4>Data de início: {{ student.inclusionDate | date }}</h4>
+</div>
