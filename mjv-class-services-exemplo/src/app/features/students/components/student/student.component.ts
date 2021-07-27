@@ -11,6 +11,9 @@ export class StudentComponent implements OnInit {
   @Input()
   student?: Student;
 
+  @Input()
+  card: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -14,7 +14,10 @@ export class StudentsPageComponent implements OnInit {
       email: 'nathan@gmail.com',
       password: '123456',
       monthlyPayment: 500,
-      inclusionDate: '2021-07-24'
+      inclusionDate: '2021-07-24',
+      lastMontlyPayment: '2021-07-24',
+      validRegistration: true,
+      course: 'Devschool MJV Angular'
     },
     {
       id: 2,
@@ -22,7 +25,10 @@ export class StudentsPageComponent implements OnInit {
       email: 'henrique@gmail.com',
       password: '123456',
       monthlyPayment: 400,
-      inclusionDate: '2021-01-24'
+      inclusionDate: '2021-01-24',
+      lastMontlyPayment: '2021-06-24',
+      validRegistration: true,
+      course: 'Devschool MJV Angular'
     },
     {
       id: 3,
@@ -30,7 +36,10 @@ export class StudentsPageComponent implements OnInit {
       email: 'alan@gmail.com',
       password: '123456',
       monthlyPayment: 450,
-      inclusionDate: '2021-06-24'
+      inclusionDate: '2021-06-24',
+      lastMontlyPayment: '2021-06-24',
+      validRegistration: true,
+      course: 'Devschool MJV Angular'
     }
   ];
 
@@ -57,7 +66,7 @@ export class StudentsPageComponent implements OnInit {
   }
 
   getStudentById(id: number) {
-    return this.students.find((student) => student.id === id);
+    return this.students.find((student) => student.id === Number(id));
   }
 
   getStudentByName(name: string) {

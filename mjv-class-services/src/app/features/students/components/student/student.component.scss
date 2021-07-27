@@ -20,8 +20,17 @@
         background-color: $cor-padrao-cinza-claro-2;
         color: $cor-padrao-textos;
         padding: 10px;
+        a {
+            text-decoration: none;
+            color: $cor-padrao-sucesso;
+        }
     }
 }
+
+.details {
+    padding-left: 16px;
+}
+
 .card:hover {
     box-shadow: 10px 5px 5px $cor-box-shadow-padrao;
 }
