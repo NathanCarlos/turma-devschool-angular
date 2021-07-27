@@ -12,8 +12,11 @@ Para ter um ponto de vista diferente do professor sobre serviços você pode ler
 
 # Exercícios
 
-Exercício 1) Com base no exercício 3 da lista de exercícios desse link: https://github.com/NathanCarlos/turma-devschool/blob/main/pipes-routing.md
-Crie uma service para separar a parte do controle dos dados, do arquivo do componente. Mova o seu array de alunos para essa service e crie uma função que retorna esses alunos, crie também uma função que retorna apenas 1 aluno e uma função que retorna alunos com base no filtro de busca.
+Exercício 1) Com base no exercício 3 da lista de exercícios desse link: https://github.com/NathanCarlos/turma-devschool/blob/main/pipes-routing.md Crie uma service para separar a parte do controle dos dados, do arquivo do componente. Mova o seu array de alunos para essa service e crie uma função que retorna esses alunos, crie também uma função que retorna apenas 1 aluno e uma função que retorna alunos com base no filtro de busca.
+
+Na tela de listagem de alunos, crie um filtro para busca por nome e um filtro para busca por id.
+
+Crie também um componente page para detalhes dos alunos conforme foi ensinado em aula.
 
 # Fontes e Referências
 
