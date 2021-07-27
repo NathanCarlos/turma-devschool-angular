@@ -4,11 +4,11 @@
     <p>Mensalidade: {{ student.monthlyPayment | currency: 'BRL' }}</p>
     <p>Data entrada: {{ student.inclusionDate | date }}</p>
     <div class="actions">
-        <a>Detalhes</a>
+        <a [routerLink]="['/student-details', student.id]">Detalhes</a>
     </div>
 </div>
 
-<!-- <div class="details" *ngIf="student && !card">
+<div class="details" *ngIf="student && !card">
     <h1>Detalhes do aluno: <b>{{ student.name }}</b></h1>
     <p>Email: {{ student.email }}</p>
     <p>Mensalidade: {{ student.monthlyPayment | currency: 'BRL' }}</p>
@@ -16,4 +16,4 @@
     <p>Data do último pagamento: {{ student.lastMontlyPayment| date }}</p>
     <p>Matrícula válida? <b>{{ student.validRegistration ? 'Sim' : 'Não' }}</b></p>
     <p>Curso atual: <b>{{ student.course }}</b></p>
-</div> -->
+</div>
