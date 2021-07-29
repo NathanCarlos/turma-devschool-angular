@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="register-container">
+    <h3>Cadastro de Estudantes</h3>
+    <form #studentForm="ngForm" class="register-form" (ngSubmit)="onSubmit(studentForm)">
+        <div class="form-field">
+            <label class="label-input">Nome do Estudante:</label>
+            <input type="text" placeholder="Digite o nome" name="name" [(ngModel)]="student.name" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Email:</label>
+            <input type="email" placeholder="Digite o Email"
+            name="email" [(ngModel)]="student.email" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Senha do estudante:</label>
+            <input type="password" placeholder="Digite a senha"
+            name="password" [(ngModel)]="student.password" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Valor da mensalidade:</label>
+            <input type="number" placeholder="Digite o valor da mensalidade"
+            name="monthlyPayment" [(ngModel)]="student.monthlyPayment" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Data de inclusão:</label>
+            <input type="text"
+            name="inclusionDate" [(ngModel)]="student.inclusionDate" disabled>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Último pagamento mensal:</label>
+            <input type="text"
+            name="lastMontlyPayment" [(ngModel)]="student.lastMontlyPayment" disabled>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Curso</label>
+            <select [(ngModel)]="student.course" name="course" required>
+                <option value="Angular MJV">Angular MJV</option>
+                <option value="Java MJV">Java MJV</option>
+                <option value="Node MJV">Node MJV</option>
+                <option value="FullStack MJV">FullStack MJV</option>
+            </select>
+        </div>
+        <div class="action-form">
+            <button
+            class="cadastrarProduto"
+            type="submit" [disabled]="studentForm.invalid">Salvar</button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

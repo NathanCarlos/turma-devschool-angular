@@ -1,0 +1,8 @@
+<app-header></app-header>
+    <div class="search">
+        <h1>Busca de Estudantes</h1>
+        <input type="text" placeholder="Digite o nome do estudante" (input)="findStudentByFilter($event, 'Name')">
+        <input type="number" placeholder="Digite o id do estudante" (input)="findStudentByFilter($event, 'Id')">
+    </div>
+    <app-student-list [students]="filteredStudents"></app-student-list>
+<app-footer></app-footer>

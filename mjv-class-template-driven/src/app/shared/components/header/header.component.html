@@ -1,0 +1,11 @@
+<nav>
+    <h3>MJV Class</h3>
+    <!-- <h3 *ngIf="student">Olá, {{ student.name }}</h3> -->
+    <ul>
+        <li (click)="navigateByUrl('students')">Home</li>
+        <li routerLink="/login">Login</li>
+        <li>Cadastro</li>
+        <li routerLink="/create-student">Adicionar Estudante</li>
+        <li (click)="exit()">Sair</li>
+    </ul>
+</nav>

@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="register-container">
+    <h3>Cadastro de Estudantes</h3>
+    <form #studentForm="ngForm" class="register-form" (ngSubmit)="onSubmit(student)">
+        <div class="form-field">
+            <label class="label-input">Nome do Estudante:</label>
+            <input type="text" placeholder="Digite o nome" 
+            [(ngModel)]="student.name" [ngModelOptions]="{standalone: true}"
+            >
+        </div>
+        <div class="form-field">
+            <label class="label-input">Email:</label>
+            <input type="email" placeholder="Digite o Email"
+            [(ngModel)]="student.email" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Senha do estudante:</label>
+            <input type="password" placeholder="Digite a senha"
+            [(ngModel)]="student.password" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Valor da mensalidade:</label>
+            <input type="number" placeholder="Digite o valor da mensalidade"
+            [(ngModel)]="student.monthlyPayment" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Data de inclusão:</label>
+            <input type="date"
+            [(ngModel)]="student.inclusionDate" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Último pagamento mensal:</label>
+            <input type="date"
+            [(ngModel)]="student.lastMontlyPayment" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Curso</label>
+            <select [value]="student.course" [(ngModel)]="student.course" [ngModelOptions]="{standalone: true}">
+                <option value="Angular MJV">Angular MJV</option>
+                <option value="Java MJV">Java MJV</option>
+                <option value="Node MJV">Node MJV</option>
+                <option value="FullStack MJV">FullStack MJV</option>
+            </select>
+        </div>
+        <div class="action-form">
+            <button
+            class="cadastrarProduto"
+            type="submit">Salvar</button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>
