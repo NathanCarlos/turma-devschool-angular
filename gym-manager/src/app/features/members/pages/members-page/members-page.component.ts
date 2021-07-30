@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../../models/member.model';
+import { MembersService } from '../../services/members.service';
 
 @Component({
   templateUrl: './members-page.component.html',
@@ -7,33 +8,23 @@ import { Member } from '../../models/member.model';
 })
 export class MembersPageComponent implements OnInit {
 
-  membersList: Array<Member> = [
-    { 
-      id: 1,
-      nome: 'Nathan Carlos',
-      valorMensalidade: 100,
-      dataUltimoPgto: '2021-07-23',
-      dataInclusaoSistema: '2021-07-01'
-    },
-    { 
-      id: 2,
-      nome: 'Alan Jhonnes',
-      valorMensalidade: 250,
-      dataUltimoPgto: '2021-07-23',
-      dataInclusaoSistema: '2021-07-01'
-    } ,
-    { 
-      id: 3,
-      nome: 'Henrique Silva',
-      valorMensalidade: 360,
-      dataUltimoPgto: '2021-07-23',
-      dataInclusaoSistema: '2021-07-01'
-    } 
-  ];
+  membersList: Array<Member> = [];
 
-  constructor() { }
+  filteredMembersList: Array<Member> = [];
+
+  constructor(private membersService: MembersService) { }
 
   ngOnInit(): void {
+    this.membersList = this.membersService.getMembers();
+    this.filteredMembersList = this.membersList;
+  }
+
+  findMembersByFilter(event: any, type: 'Name' | 'Id') {
+    const value = event.target.value;
+    if(value.length === 0) {
+      return this.filteredMembersList = this.membersList;
+    }
+    return this.filteredMembersList = type === 'Name' ? this.membersService.getMembersByName(value) : this.membersService.getMembersById(value);
   }
 
 }

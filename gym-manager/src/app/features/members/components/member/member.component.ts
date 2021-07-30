@@ -11,6 +11,9 @@ export class MemberComponent implements OnInit {
   @Input()
   member?: Member;
 
+  @Input()
+  datails: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

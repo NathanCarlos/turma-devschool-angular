@@ -1,18 +1,18 @@
 <app-header></app-header>
     <div class="login-container">
         <h3>Bem vindo! Digite seu usuário/senha para acessar o sistema!</h3>
-        <form #loginForm="ngForm" class="login-form">
+        <form class="login-form">
             <div class="form-field">
-                <input ngModel type="email" placeholder="Digite o Email" name="email" required>
+                <input [(ngModel)]="email" type="email" placeholder="Digite o Email" name="email" required>
             </div>
             <div class="form-field">
-                <input ngModel type="password" placeholder="Digite a senha" name="password" required>
+                <input [(ngModel)]="password" type="password" placeholder="Digite a senha" name="password" required>
             </div>
             <p class="error" *ngIf="error">Usuário/senha inválidos, tente novamente!</p>
         </form>
         <button
             class="primary-button"
-            type="button" (click)="validateUser(loginForm)"
-            [disabled]="!loginForm.valid">Entrar</button>
+            type="button" (click)="validateUser()"
+            [disabled]="!email || !password">Entrar</button>
     </div>
 <app-footer></app-footer>

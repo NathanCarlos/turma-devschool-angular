@@ -4,6 +4,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MemberComponent } from './components/member/member.component';
 import { MemberListComponent } from './components/member-list/member-list.component';
 import { MembersPageComponent } from './pages/members-page/members-page.component';
+import { MemberDetailsPageComponent } from './pages/member-details-page/member-details-page.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,11 +13,13 @@ import { MembersPageComponent } from './pages/members-page/members-page.componen
   declarations: [
     MemberComponent,
     MemberListComponent,
-    MembersPageComponent
+    MembersPageComponent,
+    MemberDetailsPageComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ]
 })
 export class MembersModule { }

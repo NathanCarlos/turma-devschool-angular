@@ -1,2 +1,6 @@
 <app-header></app-header>
-<app-member-list [membersList]="membersList"></app-member-list>
+<div class="search">
+    <input type="text" (input)="findMembersByFilter($event, 'Name')" placeholder="Digite um nome">
+    <input type="number" (input)="findMembersByFilter($event, 'Id')" placeholder="Digite um id">
+</div>
+<app-member-list [membersList]="filteredMembersList"></app-member-list>

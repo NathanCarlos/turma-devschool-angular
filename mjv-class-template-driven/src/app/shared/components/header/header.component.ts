@@ -9,13 +9,13 @@ import { Student } from 'src/app/features/students/models/student.model';
 })
 export class HeaderComponent implements OnInit {
 
-  student?: Student;
+  currentStudent?: Student;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    // const studentStorage = sessionStorage.getItem('student');
-    // if(studentStorage) this.student = JSON.parse(studentStorage);
+    const studentStorage = sessionStorage.getItem('currentStudent');
+    if(studentStorage) this.currentStudent = JSON.parse(studentStorage);
   }
 
   navigateByUrl(url: string) {
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   exit() {
-    // sessionStorage.clear();
+    sessionStorage.clear();
     this.navigateByUrl('/login');
   }
 

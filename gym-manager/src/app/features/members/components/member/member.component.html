@@ -2,4 +2,5 @@
     <h1>Nome: {{ member.nome }}</h1>
     <h2>Valor Mensalidade: {{ member.valorMensalidade }}</h2>
     <h3>Data último pgto: {{ member.dataUltimoPgto }}</h3>
+    <a [routerLink]="['/member-details', member.id]" *ngIf="!datails">Detalhes</a>
 </div>
