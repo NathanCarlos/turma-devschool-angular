@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Student } from '../../models/student.model';
+import { StudentsService } from '../../services/students.service';
 
 @Component({
   selector: 'app-student',
@@ -14,9 +15,13 @@ export class StudentComponent implements OnInit {
   @Input()
   card: boolean = true;
 
-  constructor() { }
+  constructor(private studentsSerive: StudentsService) { }
 
   ngOnInit(): void {
+  }
+
+  remove(id: number) {
+    this.studentsSerive.removeStudent(id);
   }
 
 }

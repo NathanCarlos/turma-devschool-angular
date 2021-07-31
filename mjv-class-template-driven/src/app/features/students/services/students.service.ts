@@ -47,17 +47,17 @@ export class StudentsService {
 
   getDefaultStudent(): Student {
     const dateToday = moment().format('YYYY/MM/DD');
-    return {
-      id: this.generateNextId(),
-      name: '',
-      email: '',
-      password: '',
-      monthlyPayment: 0,
-      inclusionDate: dateToday,
-      lastMontlyPayment: dateToday,
-      validRegistration: true,
-      course: ''
-    }
+    return this.createStudentObject(
+      this.generateNextId(),
+      '',
+      '',
+      '',
+      0,
+      dateToday,
+      dateToday,
+      true,
+      ''
+    );
   }
   getStudents() {
     return this.students;
@@ -90,6 +90,35 @@ export class StudentsService {
   createStudent(student: Student) {
     this.students.push(student);
     return this.students;
+  }
+
+  createStudentObject(
+    id: number,
+    name: string,
+    email: string,
+    password: string,
+    monthlyPayment: number,
+    inclusionDate: Date | string,
+    lastMontlyPayment: Date| string,
+    validRegistration: boolean,
+    course: string,
+  ): Student {
+    return {
+      id,
+      name,
+      email,
+      password,
+      monthlyPayment,
+      inclusionDate,
+      lastMontlyPayment,
+      validRegistration,
+      course
+    };
+  }
+
+  removeStudent(id: number) {
+    const studentIndex = this.students.findIndex((student) => student.id === Number(id));
+    this.students.splice(studentIndex, 1);
   }
 
   generateNextId(): number {

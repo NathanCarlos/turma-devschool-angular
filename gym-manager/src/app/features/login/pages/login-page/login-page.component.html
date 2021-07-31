@@ -1,2 +1,7 @@
 <app-header></app-header>
-<p>login-page works!</p>
+<form #loginForm="ngForm" class="form-login" (submit)="validateUser(loginForm)">
+    <input ngModel type="text" placeholder="Digite seu email" name="email" required>
+    <input ngModel type="password" placeholder="Digite sua senha" name="password" required>
+    <span class="error" *ngIf="error">Usuário/Senha inválidos!</span>
+    <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+</form>

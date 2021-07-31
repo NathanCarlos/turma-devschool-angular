@@ -10,6 +10,8 @@ export class MembersService {
     { 
       id: 1,
       nome: 'Nathan Carlos',
+      email: 'nathan@gmail.com',
+      senha: '123456',
       valorMensalidade: 100,
       dataUltimoPgto: '2021-07-23',
       dataInclusaoSistema: '2021-07-01'
@@ -17,6 +19,8 @@ export class MembersService {
     { 
       id: 2,
       nome: 'Alan Jhonnes',
+      email: 'alan@gmail.com',
+      senha: '123456',
       valorMensalidade: 250,
       dataUltimoPgto: '2021-07-23',
       dataInclusaoSistema: '2021-07-01'
@@ -24,6 +28,8 @@ export class MembersService {
     { 
       id: 3,
       nome: 'Henrique Silva',
+      email: 'henrique@gmail.com',
+      senha: '123456',
       valorMensalidade: 360,
       dataUltimoPgto: '2021-07-23',
       dataInclusaoSistema: '2021-07-01'
@@ -31,6 +37,10 @@ export class MembersService {
   ];
 
   constructor() { }
+
+  getMemberByEmailAndPassword(email: string, password: string) {
+    return this.membersList.find((member) => member.email === email && member.senha === password);
+  }
 
   getMembers() {
     return this.membersList;

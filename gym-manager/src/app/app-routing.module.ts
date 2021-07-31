@@ -5,11 +5,12 @@ import { RegistrationMemberPageComponent } from './features/login/pages/registra
 import { RegistrationUserPageComponent } from './features/login/pages/registration-user-page/registration-user-page.component';
 import { MemberDetailsPageComponent } from './features/members/pages/member-details-page/member-details-page.component';
 import { MembersPageComponent } from './features/members/pages/members-page/members-page.component';
+import { AuthGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'members' },
-  { path: 'members', component: MembersPageComponent },
-  { path: 'member-details/:id', component: MemberDetailsPageComponent },
+  { path: 'members', component: MembersPageComponent, canActivate: [AuthGuard] },
+  { path: 'member-details/:id', component: MemberDetailsPageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginPageComponent },
   { path: 'registration-user', component: RegistrationUserPageComponent },
   { path: 'registration-member', component: RegistrationMemberPageComponent }

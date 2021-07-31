@@ -20,9 +20,18 @@
         background-color: $cor-padrao-cinza-claro-2;
         color: $cor-padrao-textos;
         padding: 10px;
+        display: flex;
+        justify-content: space-around;
         a {
             text-decoration: none;
             color: $cor-padrao-sucesso;
+        }
+        .vertical-divisor {
+            border: 1px solid grey;
+        }
+        .remove {
+            color: $cor-aviso-perigo;
+            cursor: pointer;
         }
     }
 }

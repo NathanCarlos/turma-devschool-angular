@@ -1,6 +1,7 @@
 <ul>
-    <li routerLink="/members">Home</li>
-    <li routerLink="/registration-member">Cadastro Alunos</li>
-    <li routerLink="/login">Login</li>
-    <li routerLink="/registration-user">Cadastro Usuários</li>
+    <li routerLink="/members" *ngIf="member">Home</li>
+    <li routerLink="/registration-member" *ngIf="member">Cadastro Alunos</li>
+    <li routerLink="/login" *ngIf="!member">Login</li>
+    <li routerLink="/registration-user" *ngIf="!member">Cadastro Usuários</li>
+    <li (click)="exit()" *ngIf="member">Sair</li>
 </ul>

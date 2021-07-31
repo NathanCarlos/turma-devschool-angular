@@ -5,6 +5,8 @@
     <p>Data entrada: {{ student.inclusionDate | date }}</p>
     <div class="actions">
         <a [routerLink]="['/student-details', student.id]">Detalhes</a>
+        <div class="vertical-divisor"></div>
+        <a class="remove" (click)="remove(student.id)">Excluir</a>
     </div>
 </div>
 
