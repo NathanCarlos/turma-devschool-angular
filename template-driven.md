@@ -10,6 +10,9 @@ Para ter um ponto de vista diferente do professor sobre template driven você po
 # Exercícios
 Exercício 1) Utilize algum dos projetos que você já fez dos exercícios anteriores e crie um sistema de login para que o usuário só possa ver a página principal quando estiver logado.
 
+Exercício 2) Utilize o projeto escolhido no exercício anterior e crie uma tela para cadastro de usuários no sistema, e cadastro de items para a listagem na tela principal, por exemplo, se escolheu o sistema de gerênciamento de tarefas, crie uma tela de cadastro de usuários e uma tela de cadastro de tarefas.
+Crie também uma opção no item para que ela possa ser excluído.
+
 
 # Fontes e Referências
 
