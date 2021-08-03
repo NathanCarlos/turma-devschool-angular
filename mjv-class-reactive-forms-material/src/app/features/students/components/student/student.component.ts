@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MessageDialogComponent } from 'src/app/shared/dialogs/message-dialog/message-dialog.component';
 import { Student } from '../../models/student.model';
 import { StudentsService } from '../../services/students.service';
 
@@ -15,13 +17,20 @@ export class StudentComponent implements OnInit {
   @Input()
   card: boolean = true;
 
-  constructor(private studentsSerive: StudentsService) { }
+  constructor(private studentsSerive: StudentsService,
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   remove(id: number) {
     this.studentsSerive.removeStudent(id);
+    this.dialog.open(MessageDialogComponent, {
+      data: {
+        title: 'Exclusão',
+        message: 'Estudante excluído com sucesso!'
+      }
+    })
   }
 
 }

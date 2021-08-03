@@ -9,6 +9,8 @@ import { Student } from 'src/app/features/students/models/student.model';
 })
 export class HeaderComponent implements OnInit {
 
+  showFiller = false;
+
   currentStudent?: Student;
 
   constructor(private router: Router) { }

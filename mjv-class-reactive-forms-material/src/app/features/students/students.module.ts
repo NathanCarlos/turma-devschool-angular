@@ -7,7 +7,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { StudentDetailsPageComponent } from './pages/student-details-page/student-details-page.component';
 import { RouterModule } from '@angular/router';
 import { CreateStudentPageComponent } from './pages/create-student-page/create-student-page.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     SharedModule,
     RouterModule,
-    FormsModule
+    ReactiveFormsModule
   ]
 })
 export class StudentsModule { }

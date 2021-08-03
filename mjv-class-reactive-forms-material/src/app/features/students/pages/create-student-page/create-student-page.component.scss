@@ -47,6 +47,11 @@ app-footer {
     .register-form .action-form button:disabled {
         opacity: 0.5;
     }
+
+    .error {
+        color: red;
+        font-size: 12px;
+    }
     
 }
 

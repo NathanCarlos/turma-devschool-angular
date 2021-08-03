@@ -1,12 +1,17 @@
 <div class="card" *ngIf="student && card">
     <h1>{{ student.name }}</h1>
-    <p>Email: {{ student.email }}</p>
+    <mat-divider></mat-divider>
+    <p style="display: flex;
+    align-items: center;
+    justify-content: center;"><mat-icon>email</mat-icon>Email: {{ student.email }}</p>
+    <mat-divider></mat-divider>
     <p>Mensalidade: {{ student.monthlyPayment | currency: 'BRL' }}</p>
+    <mat-divider></mat-divider>
     <p>Data entrada: {{ student.inclusionDate | date }}</p>
     <div class="actions">
-        <a [routerLink]="['/student-details', student.id]">Detalhes</a>
+        <button mat-raised-button color="primary" [routerLink]="['/student-details', student.id]">Detalhes</button>
         <div class="vertical-divisor"></div>
-        <a class="remove" (click)="remove(student.id)">Excluir</a>
+        <button mat-raised-button class="error" color="secondary" (click)="remove(student.id)">Excluir</button>
     </div>
 </div>
 
