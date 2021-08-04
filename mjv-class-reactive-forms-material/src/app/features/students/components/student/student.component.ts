@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from 'src/app/shared/dialogs/confirmation-dialog/confirmation-dialog.component';
 import { MessageDialogComponent } from 'src/app/shared/dialogs/message-dialog/message-dialog.component';
 import { Student } from '../../models/student.model';
 import { StudentsService } from '../../services/students.service';
@@ -24,13 +25,18 @@ export class StudentComponent implements OnInit {
   }
 
   remove(id: number) {
-    this.studentsSerive.removeStudent(id);
-    this.dialog.open(MessageDialogComponent, {
-      data: {
-        title: 'Exclusão',
-        message: 'Estudante excluído com sucesso!'
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent);
+    dialogRef.afterClosed().subscribe((result) => {
+      if(result) {
+        this.studentsSerive.removeStudent(id);
+        this.dialog.open(MessageDialogComponent, {
+          data: {
+            title: 'Exclusão',
+            message: 'Estudante excluído com sucesso!'
+          }
+        });
       }
-    })
+    });
   }
 
 }

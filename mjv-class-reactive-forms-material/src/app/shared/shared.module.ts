@@ -15,6 +15,7 @@ import { MessageDialogComponent } from './dialogs/message-dialog/message-dialog.
  import {MatDialogModule} from '@angular/material/dialog';
  import {MatDividerModule} from '@angular/material/divider';
  import {MatIconModule} from '@angular/material/icon';
+import { ConfirmationDialogComponent } from './dialogs/confirmation-dialog/confirmation-dialog.component';
  
 const materialModules = [
   MatButtonModule,
@@ -38,7 +39,8 @@ const directives = [RedDirective];
   declarations: [
     ...components,
     ...pipes,
-    ...directives
+    ...directives,
+    ConfirmationDialogComponent
   ],
   imports: [
     CommonModule,
