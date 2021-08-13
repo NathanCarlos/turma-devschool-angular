@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="register-container">
+    <h3>Cadastro de Estudantes</h3>
+    <form [formGroup]="studentForm" class="register-form" (submit)="onSubmit(studentForm)">
+        <div class="form-field">
+            <label class="label-input">Nome do Estudante:</label>
+            <input type="text" formControlName="name" placeholder="Digite o nome" name="name">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Email:</label>
+            <input type="email" formControlName="email" placeholder="Digite o Email"
+            name="email">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Senha do estudante:</label>
+            <input type="password" formControlName="password" placeholder="Digite a senha"
+            name="password">
+            <span class="error" 
+            *ngIf="(studentForm.controls.password?.errors?.minlength)">
+            A senha deve ter no mínimo 6 caracteres</span>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Valor da mensalidade:</label>
+            <input type="number" formControlName="monthlyPayment" placeholder="Digite o valor da mensalidade"
+            name="monthlyPayment">
+            <span class="error" 
+            *ngIf="(studentForm.controls.monthlyPayment?.errors?.min || studentForm.controls.monthlyPayment?.errors?.max)">
+            O valor da mensalidade deve estar entre 100 e 1500*</span>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Data de inclusão:</label>
+            <input type="text" formControlName="inclusionDate"
+            name="inclusionDate">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Último pagamento mensal:</label>
+            <input type="text"
+            name="lastMontlyPayment" formControlName="lastMontlhyPayment">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Curso</label>
+            <select name="course" formControlName="course">
+                <option value="Angular MJV">Angular MJV</option>
+                <option value="Java MJV">Java MJV</option>
+                <option value="Node MJV">Node MJV</option>
+                <option value="FullStack MJV">FullStack MJV</option>
+            </select>
+        </div>
+        <div class="action-form">
+            <button
+            class="cadastrarProduto"
+            type="submit"
+            [disabled]="studentForm.invalid">Salvar</button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>
