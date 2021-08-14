@@ -18,8 +18,15 @@ export class StudentDetailsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.activedRoute.params.subscribe((params) => {
-      console.log(params.id);
-      this.student = this.studentService.getStudentById(params.id);
+      this.getStudentById(params.id);
+    });
+  }
+
+  getStudentById(id: number) {
+    this.studentService.getStudentById(id).subscribe((student) => {
+      this.student = student;
+    }, err => {
+      console.log(err);
     });
   }
 

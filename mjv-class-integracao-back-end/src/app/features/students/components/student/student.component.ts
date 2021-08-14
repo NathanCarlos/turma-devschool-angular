@@ -25,12 +25,24 @@ export class StudentComponent implements OnInit {
   }
 
   remove(id: number) {
-    this.studentsSerive.removeStudent(id);
-    this.dialog.open(MessageDialogComponent, 
-      {
-        width: '300px',
-        data: { message: 'Estudante excluído com sucesso!'},
-      });
+    this.studentsSerive.removeStudent(id).subscribe((result: any) => {
+      if (result.message === 'Estudante não encontrado!') {
+        this.dialog.open(MessageDialogComponent,
+          {
+            width: '300px',
+            data: { message: result.message },
+          });
+      } else {
+        this.dialog.open(MessageDialogComponent,
+          {
+            width: '300px',
+            data: { message: 'Estudante excluído com sucesso!' },
+          });
+        window.location.reload();
+      }
+    }, err => {
+      console.log(err);
+    });
   }
 
 }

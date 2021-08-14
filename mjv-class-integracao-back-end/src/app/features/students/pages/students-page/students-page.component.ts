@@ -15,17 +15,21 @@ export class StudentsPageComponent implements OnInit {
   constructor(private studentsService: StudentsService) { }
 
   ngOnInit(): void {
-    this.students = this.studentsService.getStudents();
-    this.filteredStudents = this.students;
+    this.studentsService.getStudents().subscribe((students) => {
+      this.students = students;
+      this.filteredStudents = this.students;
+    }, err => {
+      console.log(err);
+    });
   }
 
-  findStudentByFilter(event: any, type: 'Name' | 'Id') {
-    const value = event.target.value;
-    const students = type === 'Id' ? this.studentsService.getStudentsByFilterId(value) : this.studentsService.getStudentsByFilterName(value);
-    if(value.length === 0) {
-      return this.filteredStudents = this.students;
-    }
-    return this.filteredStudents = students;
-  }
+  // findStudentByFilter(event: any, type: 'Name' | 'Id') {
+  //   const value = event.target.value;
+  //   const students = type === 'Id' ? this.studentsService.getStudentsByFilterId(value) : this.studentsService.getStudentsByFilterName(value);
+  //   if(value.length === 0) {
+  //     return this.filteredStudents = this.students;
+  //   }
+  //   return this.filteredStudents = students;
+  // }
 
 }
